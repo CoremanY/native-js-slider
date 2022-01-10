@@ -1,0 +1,17 @@
+.footer {
+    min-height: 100px;
+    padding: 20px 0;
+  
+    &::before {
+      position: absolute;
+      border-top: 2px solid black;
+      content: "";
+      width: 100%;
+    }
+  
+    &__contacts {
+      display: flex;
+      justify-content: center;
+      padding-top: 10px;
+    }
+  }

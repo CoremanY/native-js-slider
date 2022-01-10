@@ -1,0 +1,196 @@
+.main {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .slides {
+    position: relative;
+    height: 600px;
+    width: 70%;
+    padding: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    list-style-type: none;
+  }
+  
+  .container {
+    max-width: 500px;
+    padding-top: 90px;
+  
+    @include md-sm {
+      text-align: center;
+      padding-top: 95px;
+    }
+    @include sm {
+      text-align: center;
+      padding-top: 95px;
+    }
+  }
+  
+  .white {
+    color: white;
+  }
+  
+  .black {
+    color: black;
+  }
+  
+  .slide {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 1s;
+  }
+  
+  .active {
+    opacity: 1;
+    z-index: 2;
+  }
+  
+  .slide {
+    padding: 40px;
+    box-sizing: border-box;
+    background: #333;
+    font-size: 40px;
+  
+    @include md {
+      padding: 20px;
+    }
+  }
+  
+  .slide:nth-of-type(1) {
+    background: url(../img/1.jpg);
+    background-position: center;
+    background-size: cover;
+
+    @include md-xs {
+      background-position: -500px;
+    }
+    @include xs {
+      background-position: -600px;
+    }
+  }
+  
+  .slide:nth-of-type(2) {
+    background: url(../img/2.jpg);
+    background-position: center;
+    background-size: cover;
+  
+    @include md-xs {
+      background-position: -500px;
+    }
+    @include xs {
+      background-position: -600px;
+    }
+  }
+  
+  .slide:nth-of-type(3) {
+    background: url(../img/3.jpg);
+    background-position: center;
+    background-size: cover;
+  
+    @include md-xs {
+      background-position: -500px;
+    }
+    @include xs {
+      background-position: -600px;
+    }
+  }
+  
+  .slide:nth-of-type(4) {
+    background: url(../img/4.jpg);
+    background-position: center;
+    background-size: cover;
+
+    @include md-xs {
+      background-position: -500px;
+    }
+    @include xs {
+      background-position: -600px;
+    }
+  }
+  
+  .slide:nth-of-type(5) {
+    background: url(../img/5.jpg);
+    background-position: center;
+    background-size: cover;
+  
+    @include md-xs {
+      background-position: -500px;
+    }
+    @include xs {
+      background-position: -600px;
+    }
+  }
+  
+  .indicators {
+    position: absolute;
+    display: flex;
+    gap: 10px;
+    padding: 1em;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 2;
+  }
+  
+  .control {
+    position: absolute;
+    z-index: 2;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    color: rgba(255, 255, 255, 0.2);
+    transition: 0.5s;
+  
+    &:hover,
+    &:focus {
+      color: white;
+    }
+  }
+  
+  .prev {
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+    padding-left: 10px;
+    font-size: 4rem;
+  }
+  
+  .next {
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    padding-right: 10px;
+    font-size: 4rem;
+  }
+  
+  .pause-play {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: transparent;
+    transition: 3s;
+    font-size: 30vh;
+  
+    @include sm {
+      font-size: 15vh;
+    }
+  }
+  
+  .indicator {
+    width: 35px;
+    height: 10px;
+  
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    user-select: none;
+  
+    &.active {
+      background-color: white;
+    }
+  }
